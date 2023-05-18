@@ -1,0 +1,28 @@
+@use "../var/colors" as *;
+@use "../var/mixins" as *;
+
+.reviews{
+    padding: 81px 0 99px;
+
+    h2{
+        font-weight: 600;
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 16px;
+
+        @include lg{
+            font-size: 36px;
+        }
+    }
+
+    p{
+        width: 731px;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 48px;
+
+        @include lg{
+            width: 100%;
+        }
+    }
+}

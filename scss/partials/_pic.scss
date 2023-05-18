@@ -1,0 +1,23 @@
+@use "../var/colors" as *;
+@use "../var/mixins" as *;
+
+
+.pic{
+    img{
+        width: 100%;
+    }
+
+    .dn{
+        display: none;
+
+        @include xsm{
+            display: block;
+        }
+    }
+
+    .db{
+        @include xsm{
+            display: none;
+        }
+    }
+}

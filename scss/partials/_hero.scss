@@ -1,0 +1,64 @@
+@use "../var/colors" as *;
+@use "../var/mixins" as *;
+
+.hero{
+    padding-bottom: 44px;
+    .hero-sides{
+        align-items: center;
+
+        @include lg{
+            flex-direction: column-reverse;
+        }
+    }
+    .hero-left, .hero-right{
+        width: 50%;
+
+        @include lg{
+            width: 100%;
+        }
+    }
+
+    .hero-left{
+        h1{
+            font-weight: 500;
+            font-size: 60px;
+            margin-bottom: 12px;
+
+            @include lg{
+                font-size: 40px;
+            }
+        }
+        p{
+            font-size: 20px;
+            margin-bottom: 36px;
+
+            @include lg{
+                font-size: 16px;
+            }
+        }
+    }
+
+  .certificate{
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include lg{
+      .certificate-img:nth-child(3){
+        order: -1;
+        width: 100%;
+        margin: 10px 0;
+        padding: 0 20%;
+      }
+      .certificate-img{
+        width: 40%;
+      }
+    }
+
+    @include xsm{
+      .certificate-img:nth-child(3){
+        padding: 0;
+      }
+    }
+  }
+}

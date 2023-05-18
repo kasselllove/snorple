@@ -1,0 +1,60 @@
+@use "../var/colors" as *;
+@use "../var/mixins" as *;
+
+
+.works{
+    padding: 100px 0;
+
+    h2{
+        text-align: center;
+        font-weight: 600;
+        font-size: 40px;
+        margin-bottom: 16px;
+
+        @include lg{
+            font-size: 36px;
+        }
+    }
+
+    p{
+        font-size: 16px;
+        width: 731px;
+        text-align: center;
+        margin: 0 auto 60px;
+
+        @include lg{
+            width: 100%;
+        }
+    }
+
+    .works-sides{
+        align-items: center;
+
+        @include lg{
+            flex-direction: column-reverse;
+        }
+
+        .works-left{
+            padding-right: 60px;
+
+            @include lg{
+                padding-right: 0;
+            }
+        }
+
+        .works-right{
+            @include lg{
+                text-align: center;
+                margin-bottom: 20px;
+            }
+        }
+
+        .works-left, .works-right{
+            width: 50%;
+
+            @include lg{
+                width: 100%;
+            }
+        }
+    }
+}

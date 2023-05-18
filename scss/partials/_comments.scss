@@ -1,0 +1,50 @@
+@use "../var/colors" as *;
+@use "../var/mixins" as *;
+
+.swiper-comments{
+  padding: 0 0 100px;
+  overflow: hidden;
+
+  .swiper-container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 100px;
+
+    .comments-slide{
+      padding: 32px;
+      border: 1px solid #000000;
+      border-radius: 10px;
+
+      p{
+        margin: 32px 0;
+      }
+
+      .comment-person{
+        display: flex;
+
+        .info{
+          margin-left: 16px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          h5{
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    .slider-pagination{
+      position: absolute;
+      left: 47%;
+      bottom: -60px;
+    }
+  }
+
+  .btn-w-arrow{
+    display: flex;
+    margin: 0 auto;
+  }
+}

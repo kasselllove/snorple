@@ -1,0 +1,167 @@
+@use "../var/colors" as *;
+@use "../var/mixins" as *;
+
+.solution{
+    background-color: $light-blue;
+    padding: 100px 0;
+    text-align: center;
+
+
+
+    h2{
+        font-weight: 600;
+        font-size: 40px;
+        position: relative;
+        display: inline;
+        text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+        @include lg{
+            font-size: 36px;
+            width: 379px;
+        }
+
+        img{
+            position: absolute;
+            bottom: 5px;
+            right: 0;
+
+            @include lg{
+                display: none;
+            }
+        }
+    }
+
+    p{
+        width: 731px;
+        margin: 16px auto 60px;
+
+
+        @include lg{
+            width: 100%;
+            font-size: 16px;
+        }
+    }
+
+    .solution-products{
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: left;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        .most{
+          @include lg{
+            order: -1;
+          }
+        }
+
+        .solution-product{
+          border-radius: 10px;
+          background-color: #fff;
+          padding: 32px 30px 50px 31px;
+          position: relative;
+
+          .most-popular{
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+
+          a{
+            text-decoration: underline;
+            font-weight: 500;
+            font-size: 16px;
+            color: #8A8A8A;
+            padding-right: 27px;
+            background: url("../../images/Arrow 1 (Stroke) (1).svg") no-repeat 100% 50%;
+          }
+
+          .solution-img{
+            position: relative;
+
+            .additional{
+              position: absolute;
+              right: 63px;
+              bottom: -20px;
+            }
+          }
+          
+          .solution-colors{
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 36px;
+
+            .solution-active{
+              border: 1px solid #000;
+            }
+            
+            .solution-color-1{
+              background-color: #3870C5;
+              width: 16px;
+              height: 16px;
+              border-radius: 50%;
+            }
+
+            .solution-color-2{
+              background-color: #8ABF1D;
+              width: 16px;
+              height: 16px;
+              border-radius: 50%;
+            }
+
+            .solution-color-3{
+              background-color: #F7C619;
+              width: 16px;
+              height: 16px;
+              border-radius: 50%;
+            }
+
+            .solution-color-4{
+              background-color: #E2782B;
+              width: 16px;
+              height: 16px;
+              border-radius: 50%;
+            }
+          }
+          .product-name{
+            font-weight: 600;
+            font-size: 32px;
+            margin-bottom: 5px;
+          }
+
+          .price{
+            font-weight: 800;
+            font-size: 32px;
+            color: $blue;
+            display: block;
+            margin-bottom: 20px;
+          }
+
+          .product-pluses{
+            padding-left: 36px;
+            background: url("../../images/Vector (4).svg") no-repeat;
+
+            h5{
+              font-weight: 600;
+              font-size: 18px;
+            }
+
+            span{
+              color: $grey
+            }
+
+            &:not(:last-child){
+              margin-bottom: 10px;
+            }
+          }
+          button{
+            margin-top: 36px;
+            border-radius: 5px;
+            color: #fff;
+            padding: 10px 24px 10px 58px;
+            background: $blue url("../../images/Vector (5).svg") no-repeat 24px 50%;
+          }
+        }
+    }
+}
